@@ -117,7 +117,7 @@
 									
 <ul class="breadcrumb">
 	<li>
-		<span class="icon icon-angle-left"></span>
+		<span class="fa fa-angle-left"></span>
 		<a href="https://frappe.github.io/erpnext//user/manual/en/manufacturing">
 		Manufacturing</a>
 	</li>
@@ -139,7 +139,8 @@
 						</div>
 					</div>
 					<div class="page_content">
-<p>Production Order (also called as Work Order) is a document that is given to
+<p><img class="screenshot" alt="Production Order" src="https://frappe.github.io/erpnext/assets/img/manufacturing/manufacturing-flow.png">
+Production Order (also called as Work Order) is a document that is given to
 the manufacturing shop floor by the Production Planner as a signal to produce
 a certain quantity of a certain Item. Production Order also helps to generate
 the material requirements (Stock Entry) for the Item to be produced from its
@@ -200,7 +201,7 @@ by:</p>
 <ul>
 <li>Once you have submitted your Production Order, you need to Transfer the Raw Materials to initiate the Manufacturing Process.</li>
 <li><p>This will create a Stock Entry with all the Items required to complete this Production Order to be added to the WIP Warehouse. (this will add sub-Items with BOM as one Item or explode their children based on your setting above).</p></li>
-<li><p>Click on 'Transfer Materials for Manufacturing'.</p></li>
+<li><p>Click on 'Start'.</p></li>
 </ul>
 
 <p><img class="screenshot" alt="Transfer Materials" src="https://frappe.github.io/erpnext/assets/img/manufacturing/PO-material-transfer.png"></p>
@@ -226,20 +227,20 @@ by:</p>
 <h3>Making Time Logs</h3>
 
 <ul>
-<li>Progress in the Production Order can be tracked using <a href="https://frappe.github.io/erpnext/user/manual/en/projects/time-log.html">Time Log</a></li>
-<li>Time Logs are created against Production Order Operations.</li>
-<li>Drafts of Time Logs are also created based on the scheduled operations when an Production Order is Submitted.</li>
-<li>To create more Time Logs against an operation select 'Make TIme Log' in the respective operation.</li>
+<li>Progress in the Production Order can be tracked using <a href="https://frappe.github.io/erpnext/user/manual/en/projects/timesheet/timesheet-against-production-order.html">Timesheet</a></li>
+<li>Timesheet's time slots are created against Production Order Operations.</li>
+<li>Drafts of Timesheet is created based on the scheduled operations when an Production Order is Submitted.</li>
+<li>To create more Timesheet against an operation click 'Make Timesheet' button.</li>
 </ul>
 
-<p><img class="screenshot" alt="Make TL against PO" src="https://frappe.github.io/erpnext/assets/img/manufacturing/PO-operations-make-tl.png"></p>
+<p><img class="screenshot" alt="Make timesheet against PO" src="https://frappe.github.io/erpnext/assets/img/manufacturing/PO-operations-make-ts.png"></p>
 
 <h3>Updating Finished Goods</h3>
 
 <ul>
 <li>Once you are done with the Production Order you need to update the Finished Goods.</li>
 <li>This will create a Stock Entry that will deduct all the sub-Items from the WIP Warehouse and add them to the Finished Goods Warehouse.</li>
-<li>Click on 'Update Finished Goods'.</li>
+<li>Click on 'Finish'.</li>
 </ul>
 
 <p><img class="screenshot" alt="Update Finished Goods" src="https://frappe.github.io/erpnext/assets/img/manufacturing/PO-FG-update.png"></p>
@@ -290,7 +291,7 @@ by:</p>
 <div class="page-container">
 	<div class="page-content">
 	<div class="edit-container text-center">
-		<i class="icon icon-smile"></i>
+		<i class="fa fa-smile"></i>
 		<a class="text-muted edit" href="https://github.com/frappe/erpnext/blob/develop/erpnext/docs/user/manual/en/manufacturing/production-order.md">
 			Improve this page
 		</a>
@@ -344,5 +345,17 @@ by:</p>
         window.docs_base_url = "https://frappe.github.io/erpnext";
     </script>
 
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-8911157-22', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
 	<!-- csrf_token --></body>
 </html>

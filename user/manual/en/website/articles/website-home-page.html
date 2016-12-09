@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Setting Up Dropbox Backups</title>
+	<title>Website Home Page</title>
 	<meta name="generator" content="frappe">
     <link type="text/css" rel="stylesheet" href="https://frappe.github.io/erpnext/assets/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="https://frappe.github.io/erpnext/assets/css/hljs.css">
@@ -22,7 +22,7 @@
     
 
 		</head>
-<body data-path="user/manual/en/setting-up/articles/setting-up-dropbox-backups">
+<body data-path="user/manual/en/website/articles/website-home-page">
 	<div class="main-section">
 		<div>
 				<header>
@@ -103,7 +103,7 @@
                 <div data-html-block="hero"></div>
                 <div class="container" data-html-block="content">
                 
-<div class="page-container" id="page-user/manual/en/setting-up/articles/setting-up-dropbox-backups" data-path="{{ pathname }}"
+<div class="page-container" id="page-user/manual/en/website/articles/website-home-page" data-path="{{ pathname }}"
 	>
 			<div class="row ">
 				
@@ -117,8 +117,8 @@
 									
 <ul class="breadcrumb">
 	<li>
-		<span class="icon icon-angle-left"></span>
-		<a href="https://frappe.github.io/erpnext//user/manual/en/setting-up/articles">
+		<span class="fa fa-angle-left"></span>
+		<a href="https://frappe.github.io/erpnext//user/manual/en/website/articles">
 		Articles</a>
 	</li>
 	
@@ -139,80 +139,29 @@
 						</div>
 					</div>
 					<div class="page_content">
-<h1>Setting Up Dropbox Backups</h1>
+<h1>Website Home Page</h1>
 
-<p>We always recommend customers to maintain backup of their data in ERPNext. he database backup is downloaded in the form of an SQL file. If needed, this SQL file of backup can be restored in the another ERPNext account as well.</p>
+<p>It is very much possible in ERPNext to setup certain standard page as default website Home Page. Following are steps to setup default website home page.</p>
 
-<p>You can automate database backup download of your ERPNext account into your Dropbox account.</p>
+<h4><strong>Step 1: Open Website Settings Page.</strong></h4>
 
-<h4>Step 1: Go to Setup</h4>
+<p>To Open website settings page go to:</p>
 
-<p><code>Explore &gt; Setup &gt; Integrations &gt; Dropbox Backup</code></p>
+<p><code>Website &gt; Setup &gt; Website Settings</code></p>
 
-<h4>Step 2: Activate</h4>
+<h4><strong>Step 2: Set Home page.</strong></h4>
 
-<p>In the Dropbox Backup, check "Send Backups to Dropbox" to active this feature. On checking this field, you will find field to set Frequency and notification Email.</p>
+<p>Enter standard page like, index, login, products, blog, about, contact etc. as Home Page in Landing Page section of Website Settings page. For e.g consider you want login page as your default website home page.      </p>
 
-<h4>Step 3: Set Frequency</h4>
+<p><img src="https://frappe.github.io/erpnext/assets/img/articles/Selection_021.png" alt="Website Setting Home" /></p>
 
-<p>Set Frequency to download backup in your Dropbox account.</p>
+<h4><strong>Step 3: Save Website Settings Form.</strong></h4>
 
-<p><img class="screenshot" alt="set frequency" src="https://frappe.github.io/erpnext/assets/img/setup/dropbox-1.png"></p>
+<p>After setting up Home Page Press 'Save' button from website settings page and refresh the system from Help menu. Like this you can set any standard page as your default website home page. When some one visited to your website, he/she will see home page as default landing page on your website.</p>
 
-<h4>Step 4: Allow Dropbox Access</h4>
+<p><img src="https://frappe.github.io/erpnext/assets/img/articles/Selection_022.png" alt="Website Home Page" />    </p>
 
-<p>After setting frequency and updating notification email, click on <code>Allow Dropbox access</code>. On clicking this button, the Dropbox login page will open in the new tab. This might require you to allow pop-up for your ERPNext account.</p>
-
-<h4>Step 5: Login to Dropbox</h4>
-
-<p>Login to your Dropbox account by entering login credentials.</p>
-
-<p><img class="screenshot" alt="Login" src="https://frappe.github.io/erpnext/assets/img/setup/dropbox-2.png"></p>
-
-<h4>Step 6: Allow</h4>
-
-<p>On successfull login, you will find a confirmation message as following. Click on "Allow" to let your ERPNext account have access to your Dropbox account.</p>
-
-<p><img class="screenshot" alt="Allow" src="https://frappe.github.io/erpnext/assets/img/setup/dropbox-3.png"></p>
-
-<p>With this, a folder called "ERPNext" will be created in your Dropbox account, and database backup will start to auto-download in it.</p>
-
-<h2>Open Source Users</h2>
-
-<h4>Step 1: Go to</h4>
-
-<p><a href="https://www.dropbox.com/developers/apps" target="_blank" style="line-height: 1.42857143;">https://www.dropbox.com/developers/apps</a></p>
-
-<h4>Step 2:Create a new app</h4>
-
-<p><img class="screenshot" alt="Create new" src="https://frappe.github.io/erpnext/assets/img/setup/dropbox-open-3.png"></p>
-
-<h4>Step 3: Fill in details for the app</h4>
-
-<p><img class="screenshot" alt="Create new" src="https://frappe.github.io/erpnext/assets/img/setup/dropbox-open-1.png"></p>
-
-<p>-
-<img class="screenshot" alt="Create new" src="https://frappe.github.io/erpnext/assets/img/setup/dropbox-open-2.png"></p>
-
-<h4>Step 4: Settings in Site Config</h4>
-
-<p>After the app is created, note the app key and app secret and enter in <code>sites/{sitename}/site_config.json</code> as follows,</p>
-
-<div>
-    <pre>
-        <code>{ 
- "db_name": "demo", 
- "db_password": "DZ1Idd55xJ9qvkHvUH", 
- "dropbox_access_key": "ACCESSKEY", 
- "dropbox_secret_key": "SECRECTKEY" 
-}       
-        </code>
-    </pre>
-</div>
-
-<h4>Step 5: Complete Backup</h4>
-
-<p>Setup dropbox backups from the backup manager as shown in previous section.</p>
+<!-- markdown -->
 
 </div>
 				</div>
@@ -223,8 +172,8 @@
 <div class="page-container">
 	<div class="page-content">
 	<div class="edit-container text-center">
-		<i class="icon icon-smile"></i>
-		<a class="text-muted edit" href="https://github.com/frappe/erpnext/blob/develop/erpnext/docs/user/manual/en/setting-up/articles/setting-up-dropbox-backups.md">
+		<i class="fa fa-smile"></i>
+		<a class="text-muted edit" href="https://github.com/frappe/erpnext/blob/develop/erpnext/docs/user/manual/en/website/articles/website-home-page.md">
 			Improve this page
 		</a>
 	</div>
@@ -277,5 +226,17 @@
         window.docs_base_url = "https://frappe.github.io/erpnext";
     </script>
 
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-8911157-22', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
 	<!-- csrf_token --></body>
 </html>
